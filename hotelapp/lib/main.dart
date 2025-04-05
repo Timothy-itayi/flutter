@@ -25,20 +25,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: Scaffold(
-        appBar: AppBar(title: const Text("Kogan.com")),
-        body: Column(
-          children: [
-            const Center(child: Text('Flutter Demo Home Page')),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, AuthScreen.routeName);
-              },
-              child: Text('Click'),
-            ),
-          ],
-        ),
-      ),
+      home: const AuthScreen(),
     );
   }
 }
