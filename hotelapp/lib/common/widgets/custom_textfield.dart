@@ -4,10 +4,10 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.controller,
     required this.hintText,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,9 @@ class CustomTextField extends StatelessWidget {
           borderSide: BorderSide(color: Colors.black54),
         ),
       ),
-      validator: (val) {},
+      validator: (val) {
+        return null;
+      },
     );
   }
 }
